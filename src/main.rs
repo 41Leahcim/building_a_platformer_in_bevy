@@ -37,7 +37,8 @@ fn main() {
         // Display debug information like the size and center of physics objects
         .add_plugin(RapierDebugRenderPlugin::default())
         .add_plugin(PlatformsPlugin) // Self-made plugin
-        .add_plugin(PlayerPlugin)
+        .add_plugin(PlayerPlugin) // Controlls the player
+        .add_plugin(animation::AnimationPlugin) // Controlls the animations
         .run();
 }
 

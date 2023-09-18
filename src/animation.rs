@@ -20,7 +20,9 @@ impl Animation {
 pub struct AnimationPlugin;
 
 impl Plugin for AnimationPlugin {
-    fn build(&self, app: &mut App) {}
+    fn build(&self, app: &mut App) {
+        app.add_system(animate);
+    }
 }
 
 fn animate(mut query: Query<(&mut TextureAtlasSprite, &mut Animation)>, time: Res<Time>) {
